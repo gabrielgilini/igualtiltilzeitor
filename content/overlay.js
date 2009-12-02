@@ -14,22 +14,29 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  * */
 
-var igualtiltilzeitor = {
-  onLoad: function() {
-    // initialization code
-    this.initialized = true;
-    this.strings = document.getElementById("igualtiltilzeitor-strings");
-  },
-  onMenuItemCommand: function(e) {
-    var promptService = Components.classes["@mozilla.org/embedcomp/prompt-service;1"]
-                                  .getService(Components.interfaces.nsIPromptService);
-    promptService.alert(window, this.strings.getString("helloMessageTitle"),
-                                this.strings.getString("helloMessage"));
-  },
-  onToolbarButtonCommand: function(e) {
-    // just reuse the function above.  you can change this, obviously!
-    igualtiltilzeitor.onMenuItemCommand(e);
-  }
+var igualtiltilzeitor = (function(){
+    var initialized;
+    var strings;
 
-};
-window.addEventListener("load", function(e) { igualtiltilzeitor.onLoad(e); }, false);
+
+    return {
+        onLoad: function onLoad() {
+            // initialization code
+            initialized = true;
+            strings = document.getElementById("igualtiltilzeitor-strings");
+          },
+        onMenuItemCommand: function onMenuItemCommand(e) {
+            var promptService = Components.classes["@mozilla.org/embedcomp/prompt-service;1"]
+                                            .getService(Components.interfaces.nsIPromptService);
+            promptService.alert(window, strings.getString("helloMessageTitle"),
+                                        strings.getString("helloMessage"));
+        },
+        onToolbarButtonCommand: function onToolbarButtonCommand(e) {
+            // just reuse the function above.  you can change this, obviously!
+            onMenuItemCommand(e);
+        }
+    };
+
+})();
+
+window.addEventListener("DOMContentLoaded", function(e) { igualtiltilzeitor.onLoad(e); }, false);
