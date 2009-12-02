@@ -1,0 +1,5 @@
+content	igualtiltilzeitor	content/
+locale	igualtiltilzeitor	en-US	locale/en-US/
+skin	igualtiltilzeitor	classic/1.0	skin/
+overlay	chrome://browser/content/browser.xul	chrome://igualtiltilzeitor/content/firefoxOverlay.xul
+style	chrome://global/content/customizeToolbar.xul	chrome://igualtiltilzeitor/skin/overlay.css

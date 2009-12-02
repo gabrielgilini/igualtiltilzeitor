@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  - Copyright (c) 2009 Gabriel 'punisher' Gilini
+  -
+  - Permission to use, copy, modify, and distribute this software for any
+  - purpose with or without fee is hereby granted, provided that the above
+  - copyright notice and this permission notice appear in all copies.
+  -
+  - THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+  - WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+  - MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+  - ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+  - WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+  - ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+  - OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+  - -->
+
+<?xml-stylesheet href="chrome://igualtiltilzeitor/skin/overlay.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://igualtiltilzeitor/locale/igualtiltilzeitor.dtd">
+<overlay id="igualtiltilzeitor-overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script src="overlay.js"/>
+  <stringbundleset id="stringbundleset">
+    <stringbundle id="igualtiltilzeitor-strings" src="chrome://igualtiltilzeitor/locale/igualtiltilzeitor.properties"/>
+  </stringbundleset>
+
+  <menupopup id="menu_ToolsPopup">
+    <menuitem id="igualtiltilzeitor-hello" label="&igualtiltilzeitor.label;" 
+              oncommand="igualtiltilzeitor.onMenuItemCommand(event);"/>
+  </menupopup>
+  <toolbarpalette id="BrowserToolbarPalette">
+  <toolbarbutton id="igualtiltilzeitor-toolbar-button"
+    label="&igualtiltilzeitorToolbar.label;"
+    tooltiptext="&igualtiltilzeitorToolbar.tooltip;"
+    oncommand="igualtiltilzeitor.onToolbarButtonCommand()"
+    class="toolbarbutton-1 chromeclass-toolbar-additional"/>
+  </toolbarpalette>
+</overlay>
