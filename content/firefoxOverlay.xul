@@ -23,16 +23,4 @@
   <stringbundleset id="stringbundleset">
     <stringbundle id="igualtiltilzeitor-strings" src="chrome://igualtiltilzeitor/locale/igualtiltilzeitor.properties"/>
   </stringbundleset>
-
-  <menupopup id="menu_ToolsPopup">
-    <menuitem id="igualtiltilzeitor-hello" label="&igualtiltilzeitor.label;" 
-              oncommand="igualtiltilzeitor.onMenuItemCommand(event);"/>
-  </menupopup>
-  <toolbarpalette id="BrowserToolbarPalette">
-  <toolbarbutton id="igualtiltilzeitor-toolbar-button"
-    label="&igualtiltilzeitorToolbar.label;"
-    tooltiptext="&igualtiltilzeitorToolbar.tooltip;"
-    oncommand="igualtiltilzeitor.onToolbarButtonCommand()"
-    class="toolbarbutton-1 chromeclass-toolbar-additional"/>
-  </toolbarpalette>
 </overlay>
